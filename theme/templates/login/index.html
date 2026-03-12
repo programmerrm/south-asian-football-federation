@@ -1,0 +1,96 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block title %}Saff{% endblock title %}
+
+{% block full_content %}
+
+<div class="min-h-screen flex items-center justify-center px-2 bg-gray-50">
+    <div
+        class="w-full max-w-md bg-white shadow-md border border-gray-300 p-8 h-max max-h-[90vh] overflow-y-auto scrollbar-hide rounded">
+
+
+        <div class="flex justify-center mb-6">
+            {% if logo %}
+            <a href="/">
+                <img src="{{ logo.image.url }}" alt="Logo" class="h-16 object-contain">
+            </a>
+            {% else %}
+            <a href="/">
+                <span class="text-2xl font-bold text-blue-600">Saff</span>
+            </a>
+            {% endif %}
+        </div>
+
+        <form method="POST" action="{% url 'login-view' %}">
+            {% csrf_token %}
+
+            <!-- Username / Email -->
+            <div class="mb-4">
+                <label for="{{ form.username_or_email.id_for_label }}"
+                    class="block text-sm font-medium text-gray-700 mb-1">
+                    {{ form.username_or_email.label }}
+                </label>
+                {{ form.username_or_email }}
+            </div>
+
+            <!-- Password -->
+            <div class="relative mb-4">
+                <label for="{{ form.password.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                    {{ form.password.label }}
+                </label>
+                {{ form.password }}
+
+                <span onclick="togglePassword()"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-500">
+
+                    <!-- eye icon -->
+                    <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5
+                                 c4.478 0 8.268 2.943 9.542 7
+                                 -1.274 4.057-5.064 7-9.542 7
+                                 -4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+
+                    <!-- eye off -->
+                    <svg id="eyeClose" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19
+                                 c-4.478 0-8.268-2.943-9.542-7
+                                 a9.956 9.956 0 012.293-3.95" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 00-3-3" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l18 18" />
+                    </svg>
+
+                </span>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="w-full bg-[#2271b1] hover:bg-blue-700 text-white py-2 rounded transition-all">
+                Login
+            </button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function togglePassword() {
+        const passwordInput = document.querySelector(".password-input")
+        const eyeOpen = document.getElementById("eyeOpen")
+        const eyeClose = document.getElementById("eyeClose")
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text"
+            eyeOpen.classList.add("hidden")
+            eyeClose.classList.remove("hidden")
+        } else {
+            passwordInput.type = "password"
+            eyeOpen.classList.remove("hidden")
+            eyeClose.classList.add("hidden")
+        }
+    }
+</script>
+
+{% endblock full_content %}

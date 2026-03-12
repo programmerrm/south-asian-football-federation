@@ -1,0 +1,26 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block title %}
+    Saff
+{% endblock title %}
+
+{% block full_content %}
+<div class="min-h-screen flex items-center justify-center px-2">
+    <div class="w-full max-w-[600px] bg-white shadow-md border border-[#c3c4c7] p-8 h-max max-h-[90vh] overflow-y-auto scrollbar-hide">
+        <a href="" class="flex flex-col items-center mb-6 w-full max-w-28 sm:max-w-[184px] mx-auto">
+            <img src="{% static 'images/logo.svg' %}" alt="SAFF Logo">
+        </a>
+
+        <h3 class="text-center">Portal unlocks with two options:</h3>
+
+        <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-2 space-y-4 md:space-y-0">
+            <div class="btn-wrap">
+                <a href="" class="bg-blue text-white text-lg sm:text-xl font-medium px-6 py-2 rounded-lg" aria-label="Travel Claim Form">Travel Claim Form</a>
+            </div>
+            <div class="btn-wrap">
+                <a href="" class="bg-blue text-white text-lg sm:text-xl font-medium px-6 py-2 rounded-lg" aria-label="Bank Details Form">Bank Details Form</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock full_content %}

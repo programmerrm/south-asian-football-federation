@@ -1,0 +1,8 @@
+django: python manage.py runserver
+tailwind: python manage.py tailwind start
+
+.env
+DEBUG=True
+DOMAIN_NAME=127.0.0.1
+ALLOWED_HOSTS=127.0.0.1,localhost
+DJANGO_SECRET_KEY=django-insecure--o-ng-bhk(ewqhl*aap8-de0h)n8x%utqilg4=ob5i53cnl(b)

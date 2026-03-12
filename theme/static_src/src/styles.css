@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/**
+  * A catch-all path to Django template files, JavaScript, and Python files
+  * that contain Tailwind CSS classes and will be scanned by Tailwind to generate the final CSS file.
+  *
+  * If your final CSS file is not being updated after code changes, you may want to broaden or narrow
+  * the scope of this path.
+  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+@theme {
+
+    /* ========== fonts ========== */
+    --font-titillium: "Titillium Web", sans-serif;
+    --font-dashicon: "dashicons", sans-serif;
+
+      /* ============= brakpoint =============== */
+    --breakpoint-1xl: 80rem;  /* 1280px */
+
+    /* =============== color =============== */
+    --color-body: #172144;
+    --color-blue: #263772;
+    --color-blue-light: #364EA1;
+
+    /* ============== shadow =============== */
+
+}
+
+body{
+    @apply text-base font-titillium text-body 
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; 
+}
+.dashicon::after{
+  content: '\f530';
+}
+.dashicon-hidden::after{
+  content: '\f177';
+}
+td{
+  @apply text-sm sm:text-base md:text-lg
+}
+.password-input::-ms-reveal,
+.password-input::-ms-clear {
+    display: none;
+}
+
+@layer base{
+    h1, h2, h3, h4, h5, h6, button, span, input, select, a, label, textarea, tr, td{
+        @apply font-titillium
+    }
+    
+    h3{
+        @apply text-lg sm:text-xl md:text-2xl lg:text-3xl lg:leading-10 font-semibold text-body
+    }
+    h4{
+        @apply text-lg md:text-xl lg:text-2xl text-body
+    }
+    h5{
+        @apply text-sm sm:text-base md:text-lg
+    }
+    
+}
+
+.date-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.datepicker {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px; 
+  font-size: 16px;
+  position: relative;
+  z-index: -99;
+}
+
+/* Hide native icon in all browsers */
+.datepicker::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+  appearance: none;
+}
+
+.datepicker::-webkit-inner-spin-button,
+.datepicker::-webkit-clear-button {
+  display: none;
+}
+
+/* Custom icon */
+.calendar-icon {
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url("./assets/icon/calendar.png") no-repeat center;
+  background-size: contain;
+  z-index: 999;
+}
+
+@media(max-width:768px){
+  .calendar-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@utility container {
+    @apply mx-auto px-4;
+    @media (width >=80rem   /* 1280px */
+    ) {
+        max-width: var(--breakpoint-1xl);  /* 1280px */
+    }
+}
+
+
+@source "../../../**/*.{html,py,js}";
