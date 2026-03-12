@@ -6,7 +6,7 @@ class LoginForm(forms.Form):
         label="Username or Email",
         max_length=150,
         widget=forms.TextInput(attrs={
-            "class": "w-full mt-1 mb-4 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400",
+            "class": "w-full mt-1 mb-4 px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-light",
             "placeholder": "Username or Email"
         })
     )
@@ -14,7 +14,7 @@ class LoginForm(forms.Form):
     password = forms.CharField(
         label="Password",
         widget=forms.PasswordInput(attrs={
-            "class": "w-full pl-3 pr-6 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 password-input",
+            "class": "w-full pl-3 pr-10 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-light password-input",
             "placeholder": "Password"
         })
     )
@@ -32,6 +32,9 @@ class LoginForm(forms.Form):
 class PasswordChangeForm(forms.Form):
     new_password = forms.CharField(
         label="New Password",
-        widget=forms.PasswordInput
+        widget=forms.PasswordInput(attrs={
+            "class": "w-full pl-3 pr-10 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#364ea1] password-change-input",
+            "placeholder": "Password"
+        })
     )
     
