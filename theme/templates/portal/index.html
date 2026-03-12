@@ -6,7 +6,7 @@
 
 {% block full_content %}
 <div class="min-h-screen flex items-center justify-center px-2">
-    <div class="w-full max-w-[600px] bg-white shadow-md border border-[#c3c4c7] p-8 h-max max-h-[90vh] overflow-y-auto scrollbar-hide">
+    <div class="w-full max-w-[600px] bg-white shadow-md border border-[#c3c4c7] rounded py-8 px-4 md:px-8 h-max max-h-[90vh] overflow-y-auto scrollbar-hide">
         <div class="flex justify-center mb-4 sm:mb-6">
             {% if logo %}
             <a href="/" class="max-w-[120px] sm:max-w-[140px]">
@@ -18,14 +18,10 @@
             </a>
             {% endif %}
         </div>
-        <h3 class="text-center">Portal unlocks with two options:</h3>
-        <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-2 space-y-4 md:space-y-0">
-            <div class="btn-wrap">
-                <a href="{% url 'travel-claim-view' %}" class="bg-blue text-white text-lg sm:text-xl font-medium px-6 py-2 rounded-lg" aria-label="Travel Claim Form">Travel Claim Form</a>
-            </div>
-            <div class="btn-wrap">
-                <a href="{% url 'bank-account-view' %}" class="bg-blue text-white text-lg sm:text-xl font-medium px-6 py-2 rounded-lg" aria-label="Bank Details Form">Bank Details Form</a>
-            </div>
+        <h3 class="text-base sm:text-xl font-bold text-body text-center">Portal unlocks with two options:</h3>
+        <div class="mt-4 md:mt-8 flex flex-col md:flex-row items-center justify-center gap-2 ">
+            <a href="{% url 'travel-claim-view' %}" class="bg-blue text-white text-base sm:text-xl font-medium px-6 py-2 rounded-lg" aria-label="Travel Claim Form">Travel Claim Form</a>
+            <a href="{% url 'bank-account-view' %}" class="bg-blue text-white text-base sm:text-xl font-medium px-6 py-2 rounded-lg" aria-label="Bank Details Form">Bank Details Form</a>
         </div>
     </div>
 </div>

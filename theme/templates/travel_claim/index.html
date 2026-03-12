@@ -1,337 +1,352 @@
-{% extends './base.html' %}
+{% extends '../base.html' %}
 {% load static %}
 {% block title %}
 South Asian Football Federation: SAFF
 {% endblock title %}
 
 {% block full_content %}
-<section class="pt-5 pb-12">
-    <div class="container">
-        <div class="">
-            <h3 class="text-center lg:hidden font-bold mb-2">SOUTH ASIAN FOOTBALL FEDERATION </h3>
-            <div class="flex items-center justify-between bg-white">
-                <div class="px-5 py-2 bg-black text-white">
-                    <h5>TRAVEL CLAIM FORM</h5>
+<section class="bg-[#F4F5FA]">
+    <div class="pt-5 pb-12">
+        <div class="container">
+            <div class="">
+                <h3 class="text-center lg:hidden font-bold mb-2">SOUTH ASIAN FOOTBALL FEDERATION </h3>
+                <div class="flex items-center justify-between p-2.5">
+                    <div class="px-5 py-2 bg-black text-white">
+                        <h5>TRAVEL CLAIM FORM</h5>
+                    </div>
+                    <h3 class="text-xl md:text-2xl hidden lg:block font-bold">SOUTH ASIAN FOOTBALL FEDERATION </h3>
+                    <a href="https://saffederation.org/" class="w-full max-w-20 sm:max-w-[184px]">
+                        <img src="{% static 'images/logo.svg' %}" alt="logo">
+                    </a>
                 </div>
-                <h3 class="hidden lg:block font-bold">SOUTH ASIAN FOOTBALL FEDERATION </h3>
-                <a href="https://saffederation.org/" class="w-full max-w-20 sm:max-w-[184px]">
-                    <img src="{% static 'images/logo.svg' %}" alt="logo">
-                </a>
             </div>
-        </div>
-        <div class="mt-4 sm:mt-8 space-y-6 sm:space-y-8">
-            <div class="form-item">
-                <div class="border border-[#8FAADC] p-2 bg-linear-to-t from-[#B5C8E8] to-white shadow-lg">
-                    <div class="flex items-center gap-4 md:gap-6 flex-wrap">
-                        <h4 class="font-bold text-lg sm:text-xl">Nature of Duty :</h4>
-                        <div class="flex items-center gap-2">
-                            <input type="radio" name="rating" id="tournament" value="1" class="w-5 h-5">
-                            <label for="tournament" class="cursor-pointer font-semibold">TOURNAMENT</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <input type="radio" name="rating" id="seminar" value="2" class="w-5 h-5">
-                            <label for="seminar" class="cursor-pointer font-semibold">SEMINAR</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <input type="radio" name="rating" id="event" value="3" class="w-5 h-5">
-                            <label for="event" class="cursor-pointer font-semibold">EVENT</label>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <input type="radio" name="rating" id="others" value="4" class="w-5 h-5">
-                            <label for="others" class="cursor-pointer font-semibold">OTHERS</label>
+            <div class="mt-4 sm:mt-8 space-y-6 sm:space-y-8">
+                <div class="form-item">
+                    <div class="rounded border border-[#EBEDF6] p-2 bg-[#EBEDF6] shadow-lg">
+                        <div class="flex items-center gap-2 sm:gap-4 md:gap-6 flex-wrap">
+                            <h4 class="font-bold text-lg sm:text-xl">Nature of Duty :</h4>
+                            <div class="flex items-center gap-1 sm:gap-2">
+                                <input type="radio" name="rating" id="tournament" value="1" class="w-4 sm:w-5 h-4 sm:h-5">
+                                <label for="tournament" class="cursor-pointer text-xl sm:text-2xl font-medium pb-0!">TOURNAMENT</label>
+                            </div>
+                            <div class="flex items-center gap-1 sm:gap-2">
+                                <input type="radio" name="rating" id="seminar" value="2" class="w-4 sm:w-5 h-4 sm:h-5">
+                                <label for="seminar" class="cursor-pointer text-xl sm:text-2xl font-medium pb-0!">SEMINAR</label>
+                            </div>
+                            <div class="flex items-center gap-1 sm:gap-2">
+                                <input type="radio" name="rating" id="event" value="3" class="w-4 sm:w-5 h-4 sm:h-5">
+                                <label for="event" class="cursor-pointer text-xl sm:text-2xl font-medium pb-0!">EVENT</label>
+                            </div>
+                            <div class="flex items-center gap-1 sm:gap-2">
+                                <input type="radio" name="rating" id="others" value="4" class="w-4 sm:w-5 h-4 sm:h-5">
+                                <label for="others" class="cursor-pointer text-xl sm:text-2xl font-medium pb-0!">OTHERS</label>
+                            </div>
                         </div>
                     </div>
+                    <form action="#" class="mt-4 p-4 sm:p-8 rounded border border-[#C1C8E2]">
+                        <div class="space-y-3">
+                            <div class="flex gap-2 items-center">
+                                <div class="w-1/2">
+                                    <label for="Event-Name">Event Name: </label>
+                                    <input id="Event-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                </div>
+                                <div class="w-1/2">
+                                    <label for="Your-Name">Your Name: </label>
+                                    <input id="Your-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                </div>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <div class="w-1/2">
+                                    <label for="Designation">Designation (During Competition): </label>
+                                    <input id="Designation" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                </div>
+                                <div class="w-1/2">
+                                    <label for="Nationality">Nationality: </label>
+                                    <input id="Nationality" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                </div>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <div class="w-1/2">
+                                    <label for="Venue">Venue: </label>
+                                    <input id="Venue" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                </div>
+                                <div class="w-1/2">
+                                    <label for="Phone">Phone: </label>
+                                    <input id="Phone" type="tel" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                </div>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <div class="w-1/2">
+                                    <label for="Venue">Email: </label>
+                                    <input id="Venue" type="email" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <form action="#" class="mt-4">
-                    <table class="border-collapse border border-gray-400 w-full">
-                        <tbody>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Event Name: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Your Name: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Designation (During Competition):
-                                </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="email" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Nationality: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Venue: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Phone: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="tel" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Email: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="email" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </form>
-            </div>
-            <div class="form-item">
-                <div class="border border-[#8FAADC] p-2 bg-linear-to-t from-[#B5C8E8] to-white shadow-lg">
-                    <div class="">
+                <div class="form-item">
+                    <div class="rounded border border-[#EBEDF6] p-2 bg-[#EBEDF6] shadow-lg">
                         <h4 class="font-bold px-2 text-lg sm:text-xl">Note of Expenses</h4>
                     </div>
-                </div>
-                <div class="mt-4">
-                    <div class="border border-blue">
-                        <div class="flex border-b border-blue last:border-0">
-                            <div class="w-1/3 sm:w-1/4 border-r px-2 sm:px-4 py-2">
-                                <h5 class="font-bold">Duration of the Trip</h5>
-                            </div>
-                            <form action="#" class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 flex gap-5 flex-col lg:flex-row">
-                                <div class="w-full lg:w-1/2 flex flex-col sm:flex-row sm:items-center gap-2">
-                                    <label for="" class="w-full max-w-fit font-bold">Departure Date</label>
-                                    <div class="date-wrapper w-full">
-                                        <input type="date" id="myDateDeparture"
-                                            class="datepicker appearance-none w-full border-b focus:outline-0 px-2">
-                                        <span class="calendar-icon"
-                                            onclick="document.getElementById('myDateDeparture').showPicker()"></span>
-                                    </div>
+                    <div class="mt-4">
+                        <div class="border border-[#C1C8E2]">
+                            <div class="flex border-b border-[#C1C8E2] last:border-0">
+                                <div class="w-1/3 sm:w-1/4 border-r border-[#C1C8E2] px-2 sm:px-4 py-2">
+                                    <h5 class="font-bold">Duration of the Trip</h5>
                                 </div>
-                                <div class="w-full lg:w-1/2 flex flex-col sm:flex-row sm:items-center gap-2">
-                                    <label for="" class="w-full max-w-fit font-bold">Return Date</label>
-                                    <div class="date-wrapper w-full">
-                                        <input type="date" id="myDateReturn"
-                                            class="datepicker appearance-none w-full border-b focus:outline-0 px-2">
-                                        <span class="calendar-icon"
-                                            onclick="document.getElementById('myDateReturn').showPicker()"></span>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="flex border-b border-blue last:border-0">
-                            <div class="w-1/3 sm:w-1/4 border-r border-blue px-2 sm:px-4 py-2">
-                                <h5 class="font-bold">1. Travelling Expenses (Airfare) </h5>
-                            </div>
-                            <div class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 space-y-6">
-                                <form action="#" class="w-full flex flex-col sm:flex-row sm:items-center gap-2">
-                                    <label for="" class="w-full max-w-fit font-bold">Travelling Date :</label>
-                                    <div class="date-wrapper w-full">
-                                        <input type="date" id="myDateTravelling"
-                                            class="datepicker appearance-none w-full border-b focus:outline-0 px-2">
-                                        <span class="calendar-icon"
-                                            onclick="document.getElementById('myDateTravelling').showPicker()"></span>
-                                    </div>
-                                </form>
-                                <form action="#" class="flex w-full flex-col sm:flex-row sm:items-center gap-6">
-                                    <div class="w-full sm:w-1/2 flex items-center gap-2">
-                                        <label for="" class="w-full max-w-fit font-bold">From:</label>
-                                        <input type="email" required
-                                            class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                    </div>
-                                    <div class="w-full sm:w-1/2 flex items-center gap-2">
-                                        <label for="" class="w-full max-w-fit font-bold">To:</label>
-                                        <input type="email" required
-                                            class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                    </div>
-                                </form>
-                                <form action="#" class="w-full flex flex-col sm:flex-row sm:items-center gap-2">
-                                    <label for="" class="w-full max-w-fit font-bold">Ticket cost :</label>
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </form>
-                                <form action="#" class="flex flex-col md:flex-row w-full items-center gap-6">
-                                    <div class="w-full md:w-1/2 flex flex-col sm:flex-row sm:items-center gap-2">
-                                        <label for="" class="w-full max-w-fit font-bold">Amount in Local Currency
-                                            :</label>
-                                        <input type="email" required
-                                            class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                    </div>
-                                    <div class="w-full md:w-1/2 flex flex-col sm:flex-row sm:items-center gap-2">
-                                        <label for="" class="w-full max-w-fit font-bold">Amount In USD :</label>
-                                        <input type="email" required
-                                            class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                    </div>
-                                </form>
-                                <div>
-                                    <span class="block">(Eg. BDT. 23330) </span>
-                                    <span class="block">Please provide the Exchange Rate Details for the above
-                                        details:</span>
-                                    <p>To get the currency converter, go to google and type OANDA Currency Converter or
-                                        click to the below link: </p>
-                                    <a target="_blank" href="https:/www.oanda.com/currency-converter/en/"
-                                        class="text-blue-600 wrap-break-word">https:/www.oanda.com/currency-converter/en/</a>
-                                </div>
-                                <div class="flex w-full flex-col lg:flex-row justify-between">
-                                    <p class="font-bold">Please mention the exchange rate: eg. 1USD= <span>94</span> BDT
-                                    </p>
-                                    <form action="#" class="flex items-center gap-2">
-                                        <label for="" class="w-full max-w-fit font-bold">1 USD = </label>
-                                        <input id="TravellingUSD" type="email" required
-                                            class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex border-b border-blue last:border-0">
-                            <div class="w-1/3 sm:w-1/4 border-r border-blue px-2 sm:px-4 py-2">
-                                <h5 class="font-bold">2. Daily Allowance </h5>
-                            </div>
-                            <div class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 space-y-6">
+                                <form action="#" class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 flex gap-5 flex-col lg:flex-row">
+                                    <div class="w-full lg:w-1/2 flex flex-col sm:flex-row sm:items-center gap-2">
+                                        <label for="" class="w-full max-w-fit">Departure Date :</label>
+                                        
+                                        <div class="date-wrapper w-full relative">
+                                            <input 
+                                                type="date"
+                                                id="myDateDeparture"
+                                                onclick="this.showPicker()"
+                                                class="w-full appearance-none border-b focus:outline-0 px-2 cursor-pointer"
+                                            >
 
-                                <form action="#" class="flex flex-col lg:flex-row w-full items-center gap-6">
-                                    <div class="w-full lg:w-1/2 flex flex-col sm:flex-row sm:items-center gap-2">
-                                        <label for="" class="w-full max-w-fit font-bold">Number of Days claimed
-                                            for:</label>
-                                        <input id="DailyAllowance" type="email" required
-                                            class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
+                                            <span 
+                                                class="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+                                                onclick="document.getElementById('myDateDeparture').showPicker()"
+                                            >
+                                            </span>
+                                        </div>
                                     </div>
                                     <div class="w-full lg:w-1/2 flex flex-col sm:flex-row sm:items-center gap-2">
-                                        <div class="flex flex-col w-full max-w-fit">
-                                            <label for="" class=" font-bold">Total Calculation: </label>
-                                            <span>(No. of days X USD)</span>
+                                        <label for="" class="w-full max-w-fit">Return Date :</label>
+                                        <div class="date-wrapper w-full relative">
+                                            <input 
+                                                type="date"
+                                                id="myDateDeparture"
+                                                onclick="this.showPicker()"
+                                                class="w-full appearance-none border-b focus:outline-0 px-2 cursor-pointer"
+                                            >
+
+                                            <span 
+                                                class="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+                                                onclick="document.getElementById('myDateDeparture').showPicker()"
+                                            >
+                                            </span>
                                         </div>
-                                        <input id="DailyCalculation" type="email" required
-                                            class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
                                     </div>
                                 </form>
-                                <form action="#" class="w-full flex flex-col sm:flex-row sm:items-center gap-2">
-                                    <label for="" class="w-full max-w-fit font-bold">Total Amount USD: </label>
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </form>
                             </div>
-                        </div>
-                        <div class="flex border-b border-blue last:border-0">
-                            <div class="w-1/3 sm:w-1/4 border-r border-blue px-2 sm:px-4 py-2">
-                                <h5 class="font-bold">3. Other Expenses </h5>
-                            </div>
-                            <div class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 space-y-6">
-                                <div class=" border border-blue">
-                                    <div
-                                        class="flex w-full items-center justify-between border-b border-blue last:border-0">
-                                        <div class="w-1/2 flex items-center border-r border-blue px-4 py-1">
-                                            <h5 class="font-semibold">Incidental</h5>
-                                        </div>
-                                        <div class="w-1/2 flex items-center px-4 py-1">
-                                            <h5 class="font-semibold">USD</h5>
-                                        </div>
-                                    </div>
-                                    <form action="#" class="flex w-full items-center justify-between">
-                                        <div class="w-1/2 flex items-center border-r border-blue px-2 py-1">
-                                            <input type="text" required
-                                                class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                        </div>
-                                        <div class="w-1/2 flex items-center px-2 py-1">
-                                            <input type="text" required
-                                                class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
+                            <div class="flex border-b border-[#C1C8E2] last:border-0">
+                                <div class="w-1/3 sm:w-1/4 border-r border-[#C1C8E2] px-2 sm:px-4 py-2">
+                                    <h5 class="font-bold">1. Travelling Expenses (Airfare) </h5>
+                                </div>
+                                <div class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 space-y-3 sm:space-y-6">
+                                    <form action="#" class="w-full flex flex-col sm:flex-row sm:items-center gap-2">
+                                        <label for="" class="w-full max-w-fit">Travelling Date :</label>
+                                        <div class="date-wrapper w-full relative">
+                                            <input 
+                                                type="date"
+                                                id="myDateDeparture"
+                                                onclick="this.showPicker()"
+                                                class="w-full appearance-none border-b focus:outline-0 px-2 cursor-pointer"
+                                            >
+
+                                            <span 
+                                                class="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+                                                onclick="document.getElementById('myDateDeparture').showPicker()"
+                                            >
+                                            </span>
                                         </div>
                                     </form>
-                                    <form action="#" class="flex w-full items-center justify-between">
-                                        <div class="w-1/2 flex items-center border-r border-blue px-2 py-1">
-                                            <input type="text" required
-                                                class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
+                                    <form action="#" class="flex w-full flex-col sm:flex-row sm:items-center gap-2">
+                                        <div class="w-full sm:w-1/2 flex flex-col">
+                                            <label for="" class="w-full max-w-fit">From:</label>
+                                            <input type="email" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
                                         </div>
-                                        <div class="w-1/2 flex items-center px-2 py-1">
-                                            <input type="text" required
-                                                class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
+                                        <div class="w-full sm:w-1/2 flex flex-col">
+                                            <label for="" class="w-full max-w-fit">To:</label>
+                                            <input type="email" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
                                         </div>
                                     </form>
+                                    <form action="#" class="w-full flex flex-col">
+                                        <label for="" class="w-full max-w-fit">Ticket cost :</label>
+                                        <input type="text" required
+                                            class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                    </form>
+                                    <form action="#" class="flex flex-col md:flex-row w-full items-center gap-2">
+                                        <div class="w-full md:w-1/2 flex flex-col">
+                                            <label for="" class="w-full max-w-fit">Amount in Local Currency :</label>
+                                            <input type="email" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                        </div>
+                                        <div class="w-full md:w-1/2 flex flex-col">
+                                            <label for="" class="w-full max-w-fit">Amount In USD :</label>
+                                            <input type="email" required
+                                                class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                        </div>
+                                    </form>
+                                    <div>
+                                        <span class="block text-sm sm:text-base">(Eg. BDT. 23330) </span>
+                                        <span class="block text-sm sm:text-base">Please provide the Exchange Rate Details for the above
+                                            details:</span>
+                                        <p class="text-sm sm:text-base">To get the currency converter, go to google and type OANDA Currency Converter or
+                                            click to the below link: </p>
+                                        <a target="_blank" href="https:/www.oanda.com/currency-converter/en/"
+                                            class="text-blue-600 wrap-break-word text-sm sm:text-base">https:/www.oanda.com/currency-converter/en/</a>
+                                    </div>
+                                    <div class="flex w-full flex-col lg:flex-row justify-between">
+                                        <p class="font-bold text-sm sm:text-base mb-1 lg:mb-0">Please mention the exchange rate: eg. 1USD= <span>94</span> BDT
+                                        </p>
+                                        <form action="#" class="flex items-center gap-2">
+                                            <label for="" class="w-full max-w-fit font-bold">1 USD = </label>
+                                            <input id="TravellingUSD" type="email" required
+                                                class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                        </form>
+                                    </div>
                                 </div>
-                                <form action="#"
-                                    class="w-full flex flex-col sm:flex-row items-end sm:items-center justify-end gap-2">
-                                    <label for="" class="w-full max-w-fit font-bold">Total USD: </label>
-                                    <input id="TotalUSD" type="text" required
-                                        class="w-full max-w-[200px] border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </form>
                             </div>
-                        </div>
-                        <div class="flex border-b border-blue last:border-0">
-                            <div class="w-1/3 sm:w-1/4 border-r px-2 sm:px-4 py-2">
-                                <h5 class="font-bold">4. GRAND TOTAL </h5>
-                            </div>
-                            <div class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 flex flex-col sm:flex-row gap-2.5">
-                                <div class="w-full sm:w-1/2 flex items-center gap-2">
-                                    <p class="w-full max-w-fit font-bold">Ticket + Daily Allowance+ Other Expenses: </p>
+                            <div class="flex border-b border-[#C1C8E2] last:border-0">
+                                <div class="w-1/3 sm:w-1/4 border-r border-[#C1C8E2] px-2 sm:px-4 py-2 sm:py-4">
+                                    <h5 class="font-bold">2. Daily Allowance </h5>
                                 </div>
-                                <form action="#"
-                                    class="w-full sm:w-1/2 flex flex-col sm:flex-row items-end sm:items-center justify-end gap-2">
-                                    <label for="" class="w-full max-w-fit font-bold">Total Amount USD: </label>
-                                    <input id="TotalAmountUSD" type="text" required
-                                        class="w-full max-w-[200px] border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </form>
+                                <div class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 sm:py-4 space-y-3 sm:space-y-6">
+
+                                    <form action="#" class="flex flex-col lg:flex-row w-full items-center gap-2">
+                                        <div class="w-full lg:w-1/2 flex flex-col ">
+                                            <label for="DailyAllowance" class="w-full max-w-fit ">Number of Days claimed for:</label>
+                                            <input id="DailyAllowance" type="email" required
+                                                class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                        </div>
+                                        <div class="w-full lg:w-1/2 flex flex-col ">
+                                            <div class="flex flex-col w-full max-w-fit">
+                                                <label for="DailyCalculation" class="">Total Calculation: 
+                                                <span>(No. of days X USD)</span></label>
+                                            </div>
+                                            <input id="DailyCalculation" type="email" required
+                                                class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                        </div>
+                                    </form>
+                                    <form action="#" class="w-full flex flex-col">
+                                        <label for="" class="w-full max-w-fit">Total Amount USD: </label>
+                                        <input type="text" required
+                                            class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                        <div class="flex border-b border-blue last:border-0">
-                            <div class="w-1/3 sm:w-1/4 border-r px-2 sm:px-4 py-2">
-                                <h5 class="font-bold">5. FILE UPLOADE </h5>
+                            <div class="flex border-b border-[#C1C8E2] last:border-0">
+                                <div class="w-1/3 sm:w-1/4 border-r border-[#C1C8E2] px-2 sm:px-4 py-2 sm:py-4">
+                                    <h5 class="font-bold">3. Other Expenses </h5>
+                                </div>
+                                <div class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 sm:py-4 space-y-3 sm:space-y-6">
+                                    <div class=" border border-[#C1C8E2]">
+                                        <div
+                                            class="flex w-full items-center justify-between border-b border-[#C1C8E2] last:border-0">
+                                            <div class="w-1/2 flex items-center border-r border-[#C1C8E2] px-4 py-1">
+                                                <h5 class="font-semibold">Incidental</h5>
+                                            </div>
+                                            <div class="w-1/2 flex items-center px-4 py-1">
+                                                <h5 class="font-semibold">USD</h5>
+                                            </div>
+                                        </div>
+                                        <form action="#" class="flex w-full items-center justify-between">
+                                            <div class="w-1/2 flex items-center border-r border-[#C1C8E2] px-2 py-2">
+                                                <input type="text" required
+                                                    class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                            </div>
+                                            <div class="w-1/2 flex items-center px-2 py-1">
+                                                <input type="text" required
+                                                    class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                            </div>
+                                        </form>
+                                        <form action="#" class="flex w-full items-center justify-between">
+                                            <div class="w-1/2 flex items-center border-r border-[#C1C8E2] px-2 py-2">
+                                                <input type="text" required
+                                                    class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                            </div>
+                                            <div class="w-1/2 flex items-center px-2 py-1">
+                                                <input type="text" required
+                                                    class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <form action="#"
+                                        class="w-full flex flex-col sm:flex-row items-end sm:items-center justify-end gap-2">
+                                        <label for="" class="w-full max-w-fit font-bold">Total USD: </label>
+                                        <input id="TotalUSD" type="text" required
+                                            class="w-full max-w-[200px] px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                    </form>
+                                </div>
                             </div>
-                            <div class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 flex justify-end gap-2.5">
-                                <form action="#"
-                                    class="w-full md:w-1/2 flex flex-col sm:flex-row sm:items-center gap-2">
-                                    <label for="" class="w-full max-w-fit font-bold">PDF/Image attachment:</label>
-                                    <input type="file"
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </form>
+                            <div class="flex border-b border-[#C1C8E2] last:border-0">
+                                <div class="w-1/3 sm:w-1/4 border-r border-[#C1C8E2] px-2 sm:px-4 py-2 sm:py-4">
+                                    <h5 class="font-bold">4. GRAND TOTAL </h5>
+                                </div>
+                                <div class="w-2/3 sm:w-[75%] px-2 sm:px-4 py-2 sm:py-4 flex flex-col sm:flex-row gap-2.5">
+                                    <div class="w-full sm:w-1/2 flex items-center gap-2">
+                                        <p class="w-full max-w-fit font-bold">Ticket + Daily Allowance+ Other Expenses: </p>
+                                    </div>
+                                    <form action="#"
+                                        class="w-full sm:w-1/2 flex flex-col sm:flex-row items-end sm:items-center justify-end gap-2">
+                                        <label for="" class="w-full max-w-fit font-bold">Total Amount USD: </label>
+                                        <input id="TotalAmountUSD" type="text" required
+                                            class="w-full max-w-[200px] px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="flex border-b border-[#C1C8E2] last:border-0">
+                                <div class="w-1/3 sm:w-1/4 border-r border-[#C1C8E2] px-2 sm:px-4 py-2 sm:py-4">
+                                    <h5 class="font-bold">5. FILE UPLOADE </h5>
+                                </div>
+                                <div class="w-full sm:w-1/2 px-2 sm:px-4 py-2 sm:py-4 flex justify-end gap-2.5">
+                                    <form action="#"
+                                        class="w-full flex flex-col sm:flex-row sm:items-center gap-2">
+                                        <label for="" class="w-full max-w-fit">PDF/Image attachment:</label>
+                                        <input type="file"
+                                            class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <form action="#" class="flex items-center justify-between flex-wrap md:flex-nowrap gap-5">
-                <div class="flex items-center w-full">
-                    <label for="#" class="w-full max-w-fit font-bold">Claimed by:</label>
-                    <input type="text" class="w-full border-b focus:outline-0 px-2">
-                </div>
-                <div class="flex items-center w-full">
-                    <label for="#" class="w-full max-w-fit font-bold">Date:</label>
-                    <div class="date-wrapper w-full">
-                        <input type="date" id="myDateAll"
-                            class="datepicker appearance-none w-full border-b focus:outline-0 px-2">
-                        <span class="calendar-icon" onclick="document.getElementById('myDateAll').showPicker()"></span>
+                <form action="#" class="flex items-center justify-between flex-wrap md:flex-nowrap gap-5">
+                    <div class="flex items-center w-full">
+                        <label for="#" class="w-full max-w-fit font-bold">Claimed by:</label>
+                        <input type="text" class="w-full border-b focus:outline-0 px-2">
                     </div>
+                    <div class="flex items-center w-full">
+                        <label for="#" class="w-full max-w-fit font-bold">Date:</label>
+                        <div class="date-wrapper w-full relative">
+                            <input 
+                                type="date"
+                                id="myDateDeparture"
+                                onclick="this.showPicker()"
+                                class="w-full appearance-none border-b focus:outline-0 px-2 cursor-pointer"
+                            >
+
+                            <span 
+                                class="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+                                onclick="document.getElementById('myDateDeparture').showPicker()"
+                            >
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex items-center w-full">
+                        <label for="#" class="w-full max-w-fit font-bold">Signature:</label>
+                        <input type="text" class="w-full border-b focus:outline-0 px-2">
+                    </div>
+                </form>
+                <form action="#" class="flex gap-2 items-center justify-center">
+                    <button type="submit"
+                        class="cursor-pointer bg-blue-light transition hover:bg-blue-light/80 px-6 py-2 sm:py-3 text-white rounded-sm text-base sm:text-xl font-semibold">Submit</button>
+                    <button type="submit"
+                        class="cursor-pointer bg-blue-light transition hover:bg-blue-light/80 px-6 py-2 sm:py-3 text-white rounded-sm text-base sm:text-xl font-semibold">Download</button>
+                </form>
+                <div class="bg-[#F6AD8D] px-4 py-2">
+                    <p class="">Please Note: <span class="text-sm sm:text-base font-bold"> If received by cash, a separate
+                            confirmation form will be provided which must be filled and signed.</span></p>
                 </div>
-                <div class="flex items-center w-full">
-                    <label for="#" class="w-full max-w-fit font-bold">Signature:</label>
-                    <input type="text" class="w-full border-b focus:outline-0 px-2">
+                <div class="w-full max-w-[450px] mx-auto border-4 border-[#E5E5E5] px-2 py-2 text-center">
+                    <p>South Asian Football Federation – Banani 11- Dhaka 1213</p>
+                    <p>Email: <a class="text-blue-light underline"
+                            href="mailto:info@saffederation.org">info@saffederation.org</a> </p>
                 </div>
-            </form>
-            <form action="#" class="flex items-center justify-center">
-                <button type="submit"
-                    class="cursor-pointer bg-blue-light transition hover:bg-blue-light/80 px-6 py-2 sm:py-3 text-white rounded-sm text-lg sm:text-xl font-semibold">Submit</button>
-            </form>
-            <div class="bg-[#F6AD8D] px-4 py-2">
-                <p class="">Please Note: <span class="text-sm sm:text-base font-bold"> If received by cash, a separate
-                        confirmation form will be provided which must be filled and signed.</span></p>
-            </div>
-            <div class="w-full max-w-[450px] mx-auto border-4 border-[#E5E5E5] px-2 py-1">
-                <p>South Asian Football Federation – Banani 11- Dhaka 1213</p>
-                <p>Email: <a class="text-blue-500 underline"
-                        href="mailto:info@saffederation.org">info@saffederation.org</a> </p>
             </div>
         </div>
     </div>
