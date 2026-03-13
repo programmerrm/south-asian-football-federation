@@ -7,18 +7,6 @@ South Asian Football Federation: SAFF
 {% block full_content %}
 <section class="pt-5 pb-12">
     <div class="container">
-        <!-- <div class="">
-            <h3 class="text-center lg:hidden font-bold mb-2">SOUTH ASIAN FOOTBALL FEDERATION </h3>
-            <div class="flex items-center justify-between bg-white">
-                <div class="px-5 py-2 bg-black text-white">
-                    <h5>Bank Account Information </h5>
-                </div>
-                <h3 class="hidden lg:block font-bold">SOUTH ASIAN FOOTBALL FEDERATION </h3>
-                <a href="https://saffederation.org/" class="w-full max-w-20 sm:max-w-[184px]">
-                    <img src="{% static 'images/logo.svg' %}" alt="logo">
-                </a>
-            </div>
-        </div> -->
         <div class="">
                 <h3 class="text-center lg:hidden font-bold mb-2">SOUTH ASIAN FOOTBALL FEDERATION </h3>
                 <div class="flex items-center justify-between">
@@ -33,12 +21,35 @@ South Asian Football Federation: SAFF
             </div>
         <div class="mt-4 sm:mt-8 space-y-6 sm:space-y-8">
             <div class="form-item">
-                <div class="border border-[#8FAADC] p-2 bg-linear-to-t from-[#B5C8E8] to-white shadow-lg">
-                    <div class="bg-blue">
-                        <h3 class="text-white px-2">Section A: Applicants Details </h3>
-                    </div>
+                <div class="rounded border border-[#EBEDF6] p-2 bg-[#EBEDF6] shadow-lg">
+                    <h3 class="font-bold px-2">Section A: Applicants Details </h3>
                 </div>
-                <form action="#" class="mt-4">
+                <form action="#" class="mt-4 p-4 sm:p-8 rounded border border-[#C1C8E2]">
+                    <div class="space-y-3">
+                        <div class="flex flex-col sm:flex-row gap-2 items-center">
+                            <div class="w-full sm:w-1/2">
+                                <label for="Event-Name">Name: </label>
+                                <input id="Event-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                            <div class="w-full sm:w-1/2">
+                                <label for="Your-Name">Country: </label>
+                                <input id="Your-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-2 items-center">
+                            <div class="w-full sm:w-1/2">
+                                <label for="Designation">Email: </label>
+                                <input id="Designation" type="email" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                            <div class="w-full sm:w-1/2">
+                                <label for="Nationality">Phone: </label>
+                                <input id="Nationality" type="tel" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </form>
+                <!-- <form action="#" class="mt-4">
                     <table class="border-collapse border border-gray-400 w-full">
                         <tbody>
                             <tr>
@@ -71,107 +82,78 @@ South Asian Football Federation: SAFF
                             </tr>
                         </tbody>
                     </table>
-                </form>
+                </form> -->
             </div>
             <div class="form-item">
-                <div class="border border-[#8FAADC] p-2 bg-linear-to-t from-[#B5C8E8] to-white shadow-lg">
-                    <div class="bg-blue">
-                        <h3 class="text-white px-2">Section B: Bank Details Information</h3>
-                    </div>
+                <div class="rounded border border-[#EBEDF6] p-2 bg-[#EBEDF6] shadow-lg">
+                    <h3 class="font-bold px-2">Section B: Bank Details Information</h3>
                 </div>
-                <form action="#" class="mt-4">
-                    <table class="border-collapse border border-gray-400 w-full">
-                        <tbody>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Name of Beneficiary:</td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Bank Name:</td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Bank Address: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold"></td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <form action="#" class="mt-4 p-4 sm:p-8 rounded border border-[#C1C8E2]">
+                    <div class="space-y-3">
+                        <div class="flex flex-col sm:flex-row gap-2 items-center">
+                            <div class="w-full sm:w-1/2">
+                                <label for="Event-Name">Name of Beneficiary: </label>
+                                <input id="Event-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                            <div class="w-full sm:w-1/2">
+                                <label for="Your-Name">Bank Name: </label>
+                                <input id="Your-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-2 items-center">
+                            <div class="w-full sm:w-1/2">
+                                <label for="Designation">Bank Address: </label>
+                                <input id="Designation" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <label for="Nationality"> </label>
+                            <input id="Nationality" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="form-item">
-
-                <form action="#" class="mt-4">
-                    <table class="border-collapse border border-gray-400 w-full">
-                        <tbody>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Account No: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">IBAN No: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Swift Code : </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <form action="#" class="mt-4 p-4 sm:p-8 rounded border border-[#C1C8E2]">
+                    <div class="space-y-3">
+                        <div class="flex flex-col sm:flex-row gap-2 items-center">
+                            <div class="w-full sm:w-1/2">
+                                <label for="Event-Name">Account No: </label>
+                                <input id="Event-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                            <div class="w-full sm:w-1/2">
+                                <label for="Your-Name">IBAN No: </label>
+                                <input id="Your-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-2 items-center">
+                            <div class="w-full sm:w-1/2">
+                                <label for="Designation">Swift Code: </label>
+                                <input id="Designation" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="form-item">
                 <h6 class="font-bold pl-5 pb-1">Additional Info</h6>
-                <div class="border border-[#8FAADC] p-2 bg-linear-to-t from-[#B5C8E8] to-white shadow-lg">
-                    <div class="bg-blue">
-                        <h3 class="text-white px-2 md:flex items-center gap-2 flex-wrap py-1">CORRESPONDENT OR
-                            INTERMEDIARY BANK DETAILS <span class=" text-white text-sm sm:text-lg">(IF
-                                ANY)</span> </h3>
-                    </div>
+                <div class="rounded border border-[#EBEDF6] p-2 bg-[#EBEDF6] shadow-lg">
+                    <h3 class="px-2 md:flex items-center gap-2 flex-wrap py-1">CORRESPONDENT OR INTERMEDIARY BANK DETAILS   <span class="text-sm sm:text-lg">(IF ANY)</span> 
+                    </h3>
                 </div>
-                <form action="#" class="mt-4">
-                    <table class="border-collapse border border-gray-400 w-full">
-                        <tbody>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Account No: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="border border-blue w-1/3 p-2 font-semibold">Bank Address: </td>
-                                <td class="border border-blue w-2/3 p-2 font-semibold">
-                                    <input type="text" required
-                                        class="w-full border border-[#8FAADC] px-2 py-1 bg-linear-to-bl from-[#90ABDC] via-white to-[#90ABDC] focus:outline-0">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <form action="#" class="mt-4 p-4 sm:p-8 rounded border border-[#C1C8E2]">
+                    <div class="space-y-3">
+                        <div class="flex flex-col sm:flex-row gap-2 items-center">
+                            <div class="w-full sm:w-1/2">
+                                <label for="Event-Name">Account No: </label>
+                                <input id="Event-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                            <div class="w-full sm:w-1/2">
+                                <label for="Your-Name">Bank Address: </label>
+                                <input id="Your-Name" type="text" required class="w-full px-3 py-1 border border-[#C1C8E2] rounded focus:outline-none">
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="bg-[#F6AD8D] px-4 py-2">
@@ -198,12 +180,14 @@ South Asian Football Federation: SAFF
                     <input type="text" required class="w-full border-b focus:outline-0 px-2">
                 </div>
             </form>
-            <form action="#" class="flex items-center justify-center">
+            <form action="#" class="flex gap-2 items-center justify-center">
                 <button type="submit"
-                    class="cursor-pointer bg-blue-light transition hover:bg-blue-light/80 px-6 py-2 sm:py-3 text-white rounded-sm text-lg sm:text-xl font-semibold">Submit</button>
+                    class="cursor-pointer bg-blue-light transition hover:bg-blue-light/80 px-4 sm:px-5 py-2 text-white rounded-sm text-base sm:text-lg font-medium">Submit</button>
+                <button type="submit"
+                    class="cursor-pointer bg-blue-light transition hover:bg-blue-light/80 px-4 sm:px-5 py-2 text-white rounded-sm text-base sm:text-lg font-medium">Download</button>
             </form>
             <div class="w-full text-center max-w-[450px] mx-auto border-4 border-[#E5E5E5] px-2 py-1">
-                <p>South Asian Football Federation – Banani 11- Dhaka 1213</p>
+                <p class="text-xs sm:text">South Asian Football Federation – Banani 11- Dhaka 1213</p>
                 <p>Email: <a class="text-blue-500 underline"
                         href="mailto:info@saffederation.org">info@saffederation.org</a> </p>
             </div>

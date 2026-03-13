@@ -50,6 +50,7 @@ label{
     display: none;
 }
 
+
 @layer base{
     h1, h2, h3, h4, h5, h6, button, span, input, select, a, label, textarea, tr, td{
         @apply font-titillium
@@ -64,7 +65,9 @@ label{
     h5{
         @apply text-sm sm:text-base md:text-lg
     }
-    
+    input{
+      @apply bg-[#F4F5FA] border border-[#E5E5E5]
+    }
 }
 
 .date-wrapper {
