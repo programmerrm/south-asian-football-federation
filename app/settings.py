@@ -142,3 +142,17 @@ EMAIL_HOST_PASSWORD = 'ncqf rrex rzrg jttr'
 # 7 DAYS IN SECONDS: 7 * 24 * 60 * 60 = 604800
 SESSION_COOKIE_AGE = 604800  
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+# SMTP EMAIL CONFIGRATION
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'programmerwebrm@gmail.com'
+EMAIL_HOST_PASSWORD = 'hspl dlxy rhax kmac'
+DEFAULT_FROM_EMAIL = 'South Asian Football Federation <programmerwebrm@gmail.com>'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://dev.saff.mashaallahenterprise.com"
+]
+

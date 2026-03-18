@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New Travel Claim Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #e5e5e5;
+        }
+
+        h2 {
+            color: #00004b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #00004b;
+            color: white;
+        }
+
+        .section-header {
+            background-color: #263772;
+            color: #fff;
+            text-align: left;
+            padding: 6px 8px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>New Travel Claim Submitted</h2>
+        <p>A new travel claim has been submitted. Details:</p>
+        <!-- SECTION A -->
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">Nature of Duty</th>
+            </tr>
+            <tr>
+                <th>Nature of Duty</th>
+                <td>{{ bank.nature_of_duty }}</td>
+            </tr>
+        </table>
+        <!-- SECTION B -->
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">Basic Information</th>
+            </tr>
+            <tr>
+                <th>Event Name</th>
+                <td>{{ bank.event_name }}</td>
+            </tr>
+            <tr>
+                <th>Your Name</th>
+                <td>{{ bank.your_name }}</td>
+            </tr>
+            <tr>
+                <th>Designation (During Competition)</th>
+                <td>{{ bank.designation }}</td>
+            </tr>
+            <tr>
+                <th>Nationality</th>
+                <td>{{ bank.nationality }}</td>
+            </tr>
+            <tr>
+                <th>Venue</th>
+                <td>{{ bank.venue }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ bank.phone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ bank.email }}</td>
+            </tr>
+        </table>
+        <!-- CORRESPONDENT/INTERMEDIARY BANK (Optional) -->
+        {% if bank.correspondent_account_number %}
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">Correspondent / Intermediary Bank Details</th>
+            </tr>
+            <tr>
+                <th>Account Number</th>
+                <td>{{ bank.correspondent_account_number }}</td>
+            </tr>
+            <tr>
+                <th>Bank Address</th>
+                <td>{{ bank.correspondent_bank_address }}</td>
+            </tr>
+        </table>
+        {% endif %}
+        <!-- DECLARATION -->
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">Duration of the Trip</th>
+            </tr>
+            <tr>
+                <th>Departure Date</th>
+                <td>{{ bank.departure_date }}</td>
+            </tr>
+            <tr>
+                <th>Return Date</th>
+                <td>{{ bank.return_date }}</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">Travelling Expenses (Airfare)</th>
+            </tr>
+            <tr>
+                <th>Travelling Date</th>
+                <td>{{ bank.travelling_date }}</td>
+            </tr>
+            <tr>
+                <th>From</th>
+                <td>{{ bank.travel_from }}</td>
+            </tr>
+            <tr>
+                <th>To</th>
+                <td>{{ bank.travel_to }}</td>
+            </tr>
+            <tr>
+                <th>Ticket cost</th>
+                <td>{{ bank.ticket_cost }}</td>
+            </tr>
+            <tr>
+                <th>Amount in Local Currency</th>
+                <td>{{ bank.amount_local_currency }}</td>
+            </tr>
+            <tr>
+                <th>Amount In USD</th>
+                <td>{{ bank.amount_usd }}</td>
+            </tr>
+            <tr>
+                <th>Exchange Rate</th>
+                <td>{{ bank.exchange_rate }}</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">Daily Allowance</th>
+            </tr>
+            <tr>
+                <th>Number of Days claimed for</th>
+                <td>{{ bank.number_of_days }}</td>
+            </tr>
+            <tr>
+                <th>Total Calculation: (No. of days X USD)</th>
+                <td>{{ bank.daily_calculation }}</td>
+            </tr>
+            <tr>
+                <th>Total Amount USD</th>
+                <td>{{ bank.daily_total_usd }}</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">Other Expenses</th>
+            </tr>
+            <tr>
+                <th>Incidental</th>
+                <td>{{ bank.incidental }}</td>
+            </tr>
+            <tr>
+                <th>USD</th>
+                <td>{{ bank.incidental_usd }}</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">Grand Total</th>
+            </tr>
+            <tr>
+                <th>Total Amount USD</th>
+                <td>{{ bank.other_total_usd }}</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">File Upload</th>
+            </tr>
+            <tr>
+                <th>PDF/Image attachment</th>
+                
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th class="section-header" colspan="2">Declaration</th>
+            </tr>
+            <tr>
+                <th>Claimed by</th>
+                <td>{{ bank.claimed_by }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ bank.date }}</td>
+            </tr>
+            <tr>
+                <th>Signature</th>
+                <td>{{ bank.signature }}</td>
+            </tr>
+        </table>
+        <p>Please check the admin panel for full details.</p>
+    </div>
+</body>
+
+</html>
